@@ -5,6 +5,11 @@
 
  LOCAL nArquivo, cCRLF:=Chr(13)+Chr(10), nRegistro_Produtos:=0
 
+ IF PRODUTOS->CODIGO==0
+    MessageBox(,"O arquivo está vazio.","Atenção",MB_ICONWARNING)
+    RETURN NIL
+ ENDIF
+
  nArquivo:=FCreate("Relatório.txt")
 
  FWrite(nArquivo,PadC("RELATÓRIO DE PRODUTOS", 80)+cCRLF)

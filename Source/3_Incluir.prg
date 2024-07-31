@@ -3,7 +3,7 @@
 *-----------------*
  FUNCTION INCLUIR()
 
- LOCAL GetList:={}, nCodigo:=0, cNome:=Space(50), nPreco:=0, dData:=Date(), cInativo:=Space(1)
+ LOCAL GetList:={}, nCodigo:=0, cNome:=Space(50), nPreco:=0, dCadastro:=Date(), cInativo:="N"
 
  @ 03,00 CLEAR TO 22,80
 
@@ -12,7 +12,7 @@
  @ 05,01 SAY "CODIGO:    " GET nCodigo  PICTURE "99999"  VALID nCodigo>0 .AND. !CODIGO_EXISTE(nCodigo)
  @ 06,01 SAY "NOME:      " GET cNome    PICTURE "@!S30"  VALID !Empty(cNome)
  @ 07,01 SAY "PRECO (R$):" GET nPreco   PICTURE "999.99" VALID nPreco>0
- @ 08,01 SAY "DATA:      " GET dData                     VALID dData>=Date()
+ @ 08,01 SAY "CADASTRO:  " GET dCadastro                 VALID dCadastro>=Date()
  @ 09,01 SAY "INATIVO:   " GET cInativo PICTURE "@!"     VALID (cInativo$"SN")
 
  READ
@@ -23,11 +23,11 @@
 
  SELECT PRODUTOS
  DBAppend()
- REPLACE CODIGO  WITH nCodigo
- REPLACE NOME    WITH cNome
- REPLACE PRECO   WITH nPreco
- REPLACE DATA    WITH dData
- REPLACE INATIVO WITH cInativo=="S"
+ REPLACE CODIGO   WITH nCodigo
+ REPLACE NOME     WITH cNome
+ REPLACE PRECO    WITH nPreco
+ REPLACE CADASTRO WITH dCadastro
+ REPLACE INATIVO  WITH cInativo=="S"
  DBCommit()
 
  RETURN NIL

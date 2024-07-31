@@ -67,7 +67,7 @@
       <File Filename="3_Incluir.prg"/>
       <File Filename="4_Alterar.prg"/>
       <File Filename="5_Excluir.prg"/>
-      <File Filename="6_Consultar.prg"/>
+      <File Filename="6_Buscar.prg"/>
       <File Filename="7_Relatorio.prg"/>
    </Files>
    <Libraries>

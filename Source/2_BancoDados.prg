@@ -10,11 +10,11 @@
  ENDIF
 
  IF !File("DBF\PRODUTOS.DBF")
-    DBCreate("DBF\PRODUTOS.DBF", {{"CODIGO" ,"N",05,0},;
-                                  {"NOME"   ,"C",50,0},;
-                                  {"PRECO"  ,"N",06,2},;
-                                  {"DATA"   ,"D",08,0},;
-                                  {"INATIVO","L",01,0}})
+    DBCreate("DBF\PRODUTOS.DBF", {{"CODIGO"  ,"N",05,0},;
+                                  {"NOME"    ,"C",50,0},;
+                                  {"PRECO"   ,"N",06,2},;
+                                  {"CADASTRO","D",08,0},;
+                                  {"INATIVO" ,"L",01,0}})
  ENDIF
 
  SELECT 0

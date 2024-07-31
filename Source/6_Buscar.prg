@@ -1,15 +1,20 @@
 #INCLUDE "WINUSER.CH"
 
-*------------------*
- FUNCTION CONSULTAR()
+*----------------*
+ FUNCTION BUSCAR()
 
  LOCAL GetList:={}, cNome:=Space(50), cOrdem_Produtos:="", nRegistro_Produtos:=0
+
+ IF PRODUTOS->CODIGO==0
+    MessageBox(,"O arquivo está vazio.","Atenção",MB_ICONWARNING)
+    RETURN NIL
+ ENDIF
 
  @ 12,10 CLEAR TO 15,67
 
  @ 12,12 TO 15,67
  @ 13,14 SAY "INFORME O NOME DO PRODUTO: "
- @ 14,14 GET cNome
+ @ 14,14 GET cNome PICTURE "@!"
 
  READ
 
