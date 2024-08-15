@@ -11,12 +11,12 @@
 
  INICIA_BANCO_DADOS()
 
- @ 01, 00 SAY PadC(" CADASTRO DE PRODUTOS ",80)
- @ 01, 00 SAY Date()
- @ 01, 72 SAY Time()
- @ 02, 00 SAY Replicate("-",80)
- @ 23, 00 SAY Replicate("-",80)
- @ 24, 00 SAY PadC(" INS - INCLUIR / ENTER - ALTERAR / DEL - EXCLUIR / LETRA - BUSCAR / F2 - REL ", 80)
+ @ 01,00 SAY PadC(" CADASTRO DE PRODUTOS ",80)
+ @ 01,00 SAY Date()
+ @ 01,72 SAY Time()
+ @ 02,00 SAY Replicate("-",80)
+ @ 23,00 SAY Replicate("-",80)
+ @ 24,00 SAY PadC(" INS - INCLUIR / ENTER - ALTERAR / DEL - EXCLUIR / LETRA - BUSCAR / F2 - REL ", 80)
 
  SELECT PRODUTOS
  OrdSetFocus("NOME")
